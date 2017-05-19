@@ -1,0 +1,2 @@
+cabot_alert_email
+https://codeload.github.com/XuryaX/cabot_alert_xoxzo/zip/master

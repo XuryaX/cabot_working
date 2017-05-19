@@ -1,0 +1,8 @@
+version: '2'
+services:
+  base:
+    build: .
+    image: cabot:web
+    command: "false"
+    env_file:
+      - conf/default.env
