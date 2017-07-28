@@ -267,11 +267,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-AUTH_LDAP = force_bool(os.environ.get('AUTH_LDAP', False))
-
-if AUTH_LDAP:
-    from settings_ldap import *
-    AUTHENTICATION_BACKENDS += tuple(['django_auth_ldap.backend.LDAPBackend'])
 
 # Github SSO
 AUTH_GITHUB_ENTERPRISE_ORG = force_bool(os.environ.get('AUTH_GITHUB_ENTERPRISE_ORG', False))
