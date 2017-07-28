@@ -8,7 +8,7 @@ coreschema==0.0.4
 dj-database-url==0.4.2
 Django
 django-appconf==1.0.2
-django-compressor==2.1.1
+django-compressor
 django-filter==1.0.2
 django-jsonify==0.3.0
 django-polymorphic==1.2
