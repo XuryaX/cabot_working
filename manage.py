@@ -11,3 +11,8 @@ if __name__ == "__main__":
     run = True
     if run:
 	execute_from_command_line(sys.argv)
+	migration = ['manage.py', 'makemigrations']
+	execute_from_command_line(migration)
+
+	migrate = ['manage.py', 'migrate']
+	execute_from_command_line(migrate)
