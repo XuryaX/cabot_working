@@ -16,3 +16,6 @@ if __name__ == "__main__":
 
 	migrate = ['manage.py', 'migrate']
 	execute_from_command_line(migrate)
+	
+	compress = ['manage.py','compress']
+	execute_from_command_line(compress)
