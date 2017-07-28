@@ -177,7 +177,7 @@ EMAIL_BACKEND = environ_get_list(
 EMAIL_USE_TLS = force_bool(environ_get_list(['EMAIL_USE_TLS', 'SES_USE_TLS'], False))
 EMAIL_USE_SSL = force_bool(environ_get_list(['EMAIL_USE_SSL', 'SES_USE_SSL'], not EMAIL_USE_TLS))
 
-COMPRESS_OFFLINE = False
+COMPRESS_OFFLINE = not DEBUG
 
 RECOVERY_SNIPPETS_WHITELIST = (
     r'https?://[^.]+\.hackpad\.com/[^./]+\.js',
