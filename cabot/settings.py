@@ -24,7 +24,7 @@ DATABASES = {'default': dj_database_url.config()}
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-URL_PREFIX = os.environ.get('URL_PREFIX', '/').rstrip('/')
+URL_PREFIX = 'https://cabot.flynn.xoxzo.int'
 
 LOGIN_URL = os.environ.get('LOGIN_URL', reverse_lazy('login'))
 LOGIN_REDIRECT_URL = reverse_lazy('services')
@@ -75,8 +75,10 @@ COMPRESS_ROOT = STATIC_ROOT
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'https://cabot.flynn.xoxzo.int/static/'
+STATIC_URL = '%s/static/' % URL_PREFIX
 COMPRESS_URL = STATIC_URL
+
+print(MEDIA_URL,COMPRESS_ROOT,COMPRESS_URL)
 
 # Additional locations of static files
 STATICFILES_DIRS = [os.path.join(PROJECT_ROOT, 'static')]
