@@ -1,4 +1,3 @@
-https://codeload.github.com/XuryaX/cabot_alert_xoxzo/zip/master
 cabot_alert_email==1.4.3
 cabot_alert_hipchat==2.0.2
 cabot_alert_twilio==1.3.1
