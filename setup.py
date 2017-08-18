@@ -9,6 +9,19 @@ from pip.req import parse_requirements
 requirements = [str(req.req) for req in parse_requirements('requirements.txt', session=False)]
 requirements_plugins = [str(req.req) for req in parse_requirements('requirements-plugins.txt', session=False)]
 
+print(requirements,"\n \n \n \n")
+print(requirements_plugins,"\n \n \n \n")
+
+try:
+    requirements.remove("None")
+except:
+    pass
+
+try:
+    requirements_plugins.remove("None")
+except:
+    pass
+
 try:
     VERSION = subprocess.check_output(['git', 'describe', '--tags']).strip()
 except subprocess.CalledProcessError:
